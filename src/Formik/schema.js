@@ -17,7 +17,7 @@ export const RegistSchema = Yup.object().shape({
     Password: Yup.string().required('Please Enter your Password').min(8, 'Password must be at least 8 numbers'),
     Fullname: Yup.string().required('Please Enter your Full name'),
     Phonenumber: Yup.string().required('Please Enter your Mobile number').matches(phoneRegExp, 'Invalid mobile number'),
-    Confirmpassword: Yup.string().required('Please Enter your Confirm password').min(8, 'Confirm Password must be at least 8 numbers').oneOf([Yup.ref('password'), null], 'Passwords do not match'),
+    Confirmpassword: Yup.string().required('Please Enter your Confirm password').min(8, 'Confirm Password must be at least 8 numbers').oneOf([Yup.ref('Password'), null], 'Passwords do not match'),
 })
 
 export const ForgetSchema = Yup.object().shape({

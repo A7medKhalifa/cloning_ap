@@ -1,10 +1,12 @@
 import { api } from "../_axios"
 
-const login = (body: any) => api.post('login', body)
+const sign_up_step1 = (body: any) => api.post('user/auth/sign_up_step1.php', body)
+const sign_up_step2 = (body: any) => api.post('user/auth/student_new_signup.php', body)
 
 
 const AuthAPI = {
-    login,
+    sign_up_step1,
+    sign_up_step2,
 };
 
 export default AuthAPI;

@@ -5,16 +5,22 @@ import { styles } from '../style';
 import { Arrow, Logo } from 'assets/icons';
 import Button from 'components/Button';
 import { useNavigation } from '@react-navigation/native';
+import { useAppDispatch } from 'store/store';
+import AuthThunks from 'store/auth/thunks';
+import { useSelector } from 'react-redux';
+import { selectTempData } from 'store/auth';
 
 
-function Form() {
-  const CELL_COUNT = 4;
+function Form({ code }: { code?: any }) {
+  const CELL_COUNT = 6;
+  const dispatch = useAppDispatch()
+  const { goBack } = useNavigation()
   const [value, setValue] = React.useState('');
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(59);
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({ value, setValue });
-  const { goBack } = useNavigation()
+  const TempData = useSelector(selectTempData)
   const ResendOTP = () => {
     setSeconds(59)
   }
@@ -38,6 +44,16 @@ function Form() {
       clearInterval(interval);
     };
   }, [seconds])
+
+  const Create = () => {
+    console.log(code)
+    console.log(value)
+    value == code && (
+      dispatch(AuthThunks.doSignUpStep2(
+        TempData
+      ))
+    )
+  }
   return (
     <>
       <TouchableOpacity onPress={() => {
@@ -82,7 +98,7 @@ function Form() {
         fill
         title="Create account"
         style={styles.Button}
-        onPress={() => props.handleSubmit()}
+        onPress={() => {Create() }}
       />
     </>
   );

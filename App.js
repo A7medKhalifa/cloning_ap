@@ -27,7 +27,7 @@ const App = () => {
         <I18nextProvider i18n={i18next}>
           <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <NavigationContainer>
-              <ViewVideoScreen />
+              <RootStackScreens />
             </NavigationContainer>
           </SafeAreaProvider>
         </I18nextProvider>

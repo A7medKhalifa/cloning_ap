@@ -3,6 +3,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Form from './components/Form';
 import { styles } from './style';
+import { Platform } from 'react-native';
 
 const RegisterScreen = () => {
     return (
