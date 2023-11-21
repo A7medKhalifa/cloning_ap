@@ -19,6 +19,7 @@ import VideosScreen from 'screens/App/Videos'
 import AddSubscriptionScreen from 'screens/App/Add Subscription'
 import NotificationScreen from 'screens/App/Notification'
 import ViewVideoScreen from 'screens/App/View Video'
+import FullPageExamScreen from 'screens/App/Full Page Exam'
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
         <I18nextProvider i18n={i18next}>
           <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <NavigationContainer>
-              <RootStackScreens />
+              <FullPageExamScreen />
             </NavigationContainer>
           </SafeAreaProvider>
         </I18nextProvider>
