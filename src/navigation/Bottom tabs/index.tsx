@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { colors } from 'theme';
 import styles from './styles';
 import HomeScreen from 'screens/App/Home';
-import { Bell, Book, Home, Profile } from 'assets/icons';
+import { Bell, Question, Home, Profile } from 'assets/icons';
 import { useSelector } from 'react-redux';
 import { selectLang } from 'store/auth';
 import { InitI18n } from 'src/i18n';
@@ -16,7 +16,7 @@ const BottomTab = createBottomTabNavigator();
 
 
 export default function BottomTabs() {
-    
+
     return (
         <BottomTab.Navigator
             initialRouteName='Home'
@@ -32,11 +32,11 @@ export default function BottomTabs() {
                 tabBarIcon: ({ focused }) => (
                     focused ?
                         <View style={styles.Calculator}>
-                            <Book fill={'#fff'} />
+                            <Question fill={'#fff'} />
                         </View>
                         :
                         <View style={styles.tabBarIcon}>
-                            <Book fill={'#000'} />
+                            <Question fill={'#000'} />
                         </View>
                 )
             }}

@@ -8,6 +8,8 @@ import Profile from './Profile.svg';
 import Home from './Home.svg';
 import Book from './Book.svg';
 import Liked from './liked.svg';
+import Question from './Question.svg';
+import Exam from './Exam.svg';
 
 import FaceBook from "./Facebook.svg"
 import Google from "./Google.svg"
@@ -24,6 +26,8 @@ export {
     Home,
     Book,
     Liked,
+    Question,
+    Exam,
 
     FaceBook,
     Google,

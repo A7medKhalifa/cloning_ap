@@ -4,6 +4,8 @@ import FullQuestios from 'screens/App/FullQuestios/FullQuestios';
 import PdfViewer from 'screens/App/PdfViewer/PdfViewer';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors } from 'theme/colors';
+import CoursesListScreen from 'screens/App/Courses List';
+import Courses from 'screens/App/Courses';
 const Tab = createMaterialTopTabNavigator();
 const TopBar = () => {
   return (
@@ -14,17 +16,17 @@ const TopBar = () => {
       <Tab.Navigator screenOptions={{}}>
         <Tab.Screen
           options={{
-            title: ' Questions',
+            title: ' Exams',
           }}
           name="FullQuestios"
           component={FullQuestios}
         />
         <Tab.Screen
           options={{
-            title: 'Instruction',
+            title: 'MCQ',
           }}
-          name="PdfViewer"
-          component={PdfViewer}
+          name="Courses"
+          component={Courses}
         />
       </Tab.Navigator>
     </SafeAreaView>

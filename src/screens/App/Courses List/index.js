@@ -7,12 +7,12 @@ import LectureCard from './components/LectureCard'
 
 const CoursesListScreen = () => {
     return (
-        <SafeAreaView style={styles.Container}>
-            <Header />
+        <SafeAreaView edges={['top']} style={styles.Container}>
+            {/* <Header /> */}
             <FlatList
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
-                style={{ marginTop: 30 }}
+                style={{ marginTop: -20 }}
                 columnWrapperStyle={{ justifyContent: 'space-between', marginTop: 15 }}
                 data={[{}, {}, {}, {}, {}, {}, {}, {}]}
                 renderItem={({ index }) => (
