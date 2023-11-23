@@ -11,7 +11,10 @@ export const styles = StyleSheet.create({
   },
   Logo: {
     alignSelf: 'center',
-    marginVertical: 30
+    marginVertical: 30,
+    height: 100,
+    width: 250,
+    resizeMode: 'contain'
   },
   Row: {
     flexDirection: 'row',

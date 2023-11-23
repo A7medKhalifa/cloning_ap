@@ -3,11 +3,12 @@ import { Formik } from 'formik';
 import { forget_initial_values } from 'src/Formik/initialValues';
 import { ForgetSchema } from 'src/Formik/schema';
 import Input from 'components/Input';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../style';
-import { Arrow, Logo } from 'assets/icons';
+import { Arrow } from 'assets/icons';
 import Button from 'components/Button';
 import { useNavigation } from '@react-navigation/native';
+import { Logo } from 'assets/Images';
 
 
 function Form() {
@@ -27,7 +28,7 @@ function Form() {
           </TouchableOpacity>
 
           <View style={styles.InputsContainer}>
-            <Logo style={styles.Logo} />
+            <Image style={styles.Logo} source={Logo} />
             <Input
               {...props}
               Label="E-mail"

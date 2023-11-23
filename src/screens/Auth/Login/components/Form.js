@@ -3,12 +3,13 @@ import { Formik } from 'formik';
 import { login_initial_values } from 'src/Formik/initialValues';
 import { LoginSchema } from 'src/Formik/schema';
 import Input from 'components/Input';
-import { Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 import { styles } from '../style';
-import { Apple, FaceBook, Google, Logo } from 'assets/icons';
+import { Apple, FaceBook, Google } from 'assets/icons';
 import Button from 'components/Button';
 import SocialIcon from './Social';
 import { useNavigation } from '@react-navigation/native';
+import { Logo } from 'assets/Images';
 
 
 function Form() {
@@ -23,7 +24,7 @@ function Form() {
       {props => (
         <>
           <View style={styles.InputsContainer}>
-            <Logo style={styles.Logo} />
+            <Image style={styles.Logo} source={Logo} />
             <Input
               {...props}
               Label="E-mail"

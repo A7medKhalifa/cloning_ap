@@ -8,6 +8,7 @@ import { selectLang } from 'store/auth';
 import { InitI18n } from 'src/i18n';
 import SubjectDetailScreen from 'screens/App/Subject Details';
 import CoursesListScreen from 'screens/App/Courses List';
+import SplashScreen from 'screens/Splash';
 
 
 
@@ -18,20 +19,20 @@ const RootStackScreens = () => {
     useEffect(() => {
         InitI18n('en')
     }, [Lang])
-    // const [Splash, setSplash] = React.useState(true)
+    const [Splash, setSplash] = React.useState(true)
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setSplash(false)
-    //     }, 2000)
-    // }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setSplash(false)
+        }, 2500)
+    }, [])
     return (
         <RootStack.Navigator
             screenOptions={{ headerShown: false }
             }
             initialRouteName="Splash"
         >
-            {/* {Splash && <RootStack.Screen name="Splash" component={SplashScreen} />} */}
+            {Splash && <RootStack.Screen name="Splash" component={SplashScreen} />}
 
             <RootStack.Screen name="Auth" component={AuthStackScreens} />
 

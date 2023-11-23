@@ -1,14 +1,15 @@
 import React from 'react';
 import { CodeField, Cursor, useBlurOnFulfill, useClearByFocusCell } from 'react-native-confirmation-code-field';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../style';
-import { Arrow, Logo } from 'assets/icons';
+import { Arrow } from 'assets/icons';
 import Button from 'components/Button';
 import { useNavigation } from '@react-navigation/native';
 import { useAppDispatch } from 'store/store';
 import AuthThunks from 'store/auth/thunks';
 import { useSelector } from 'react-redux';
 import { selectTempData } from 'store/auth';
+import { Logo } from 'assets/Images';
 
 
 function Form({ code }: { code?: any }) {
@@ -64,7 +65,7 @@ function Form({ code }: { code?: any }) {
       </TouchableOpacity>
 
       <View style={styles.InputsContainer}>
-        <Logo style={styles.Logo} />
+        <Image style={styles.Logo} source={Logo} />
         <CodeField
           ref={ref}
           {...props}
@@ -98,7 +99,7 @@ function Form({ code }: { code?: any }) {
         fill
         title="Create account"
         style={styles.Button}
-        onPress={() => {Create() }}
+        onPress={() => { Create() }}
       />
     </>
   );

@@ -10,9 +10,12 @@ export const styles = StyleSheet.create({
   InputsContainer: {
     paddingHorizontal: 20,
   },
-  Logo:{
+  Logo: {
     alignSelf: 'center',
-    marginVertical: 30
+    marginVertical: 30,
+    height: 100,
+    width: 250,
+    resizeMode: 'contain'
   },
   ForgotPassword: {
     color: colors.black,
@@ -54,7 +57,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center'
   },
-  CreateNewText:{
+  CreateNewText: {
     fontSize: 14,
     fontWeight: '500',
     textDecorationLine: 'underline',
